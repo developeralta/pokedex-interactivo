@@ -1,0 +1,60 @@
+{
+  "name": "pokedex-iteractivo",
+  "version": "1.0.0",
+  "description": "Pokedex iteractivo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developeralta/pokedex-interactivo.git"
+  },
+  "author": "developeralta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developeralta/pokedex-interactivo/issues"
+  },
+  "homepage": "https://github.com/developeralta/pokedex-interactivo#readme",
+  "main": "dist/index.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "test": "jest",
+    "build": "webpack --config ./webpack.prod.config.js"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/.mocks/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/.mocks/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "./src/setupTests.js"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.8",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.9",
+    "@babel/preset-react": "^7.14.5",
+    "babel-jest": "^27.0.6",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "^27.0.6",
+    "react-hot-loader": "^4.13.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.14.8",
+    "@react-icons/all-files": "^4.1.0",
+    "dotenv-webpack": "^7.0.3",
+    "html-webpack-plugin": "^5.3.2",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "url-loader": "^4.1.1"
+  }
+}
