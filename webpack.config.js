@@ -1,5 +1,4 @@
 const path = require("path");
-const Dotenv = require("dotenv-webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 
@@ -35,7 +34,7 @@ module.exports = {
     port: 2861,
     disableHostCheck: true,
     historyApiFallback: true,
-    host: "192.168.1.69",//your ip address
+    host: "192.168.1.72",//your ip address
   },
   plugins: [
      new HtmlWebpackPlugin({
@@ -43,6 +42,5 @@ module.exports = {
         template: path.resolve(__dirname, "public/index.html"),
      }),
    new CleanWebpackPlugin(),
-   new Dotenv()
   ]
 }
